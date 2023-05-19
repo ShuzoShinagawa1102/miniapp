@@ -1,0 +1,21 @@
+[
+    {
+      "pagePath": "../home/home",
+      "iconPath": "/static/tabbar01.png",
+      "selectedIconPath": "/static/logo.png",
+      "text": "トップページ"
+    },
+    {
+      "pagePath": "../home/home",
+      "iconPath": "/static/tabbar02.png",
+      "selectedIconPath": "/static/logo.png",
+      "text": "獲得済みクーポン一覧"
+    },
+    {
+      "pagePath": "../home/home",
+      "iconPath": "/static/tabbar03.png",
+      "selectedIconPath": "/static/logo.png",
+      "text": "マイページ"
+    }
+  ]
+  

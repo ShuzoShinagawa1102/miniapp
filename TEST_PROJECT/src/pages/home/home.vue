@@ -1,8 +1,7 @@
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png" />
-
-    <hello-world :title="title" />
+    <page-map />
+    <page-navbar :current="0" />
   </view>
 </template>
 
