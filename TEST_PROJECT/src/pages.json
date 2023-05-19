@@ -1,0 +1,17 @@
+{
+  "pages": [
+    {
+      "path": "pages/home/home",
+      "style": {
+        "navigationBarTitleText": "テストプロジェクト"
+      }
+    }
+    
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "テストプロジェクト",
+    "navigationBarBackgroundColor": "#D48831",
+    "backgroundColor": "#F8F8F8"
+  }
+}
