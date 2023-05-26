@@ -1,16 +1,26 @@
 <template>
   <view>
     <view class="page-navbar-view">
-      <view>
-        <view>
-          <text>ナビゲーションバーでやす。</text>
-
-
+      <view
+        v-for="(item, index) in list"
+        class="page-navbar-item"
+        :key="index"
+        @tap="onTabbarClick(index)"
+      >
+        <view class="page-navbar-item__icon">
+          <image
+            v-if="index === currentIndex"
+            class="page-navbar-item__image"
+            :src="item.selectedIconPath"
+          />
+          <image v-else class="page-navbar-item__image" :src="item.iconPath" />
         </view>
+        <text class="page-navbar-item__text">{{ item.text }}</text>
       </view>
     </view>
   </view>
 </template>
+
 
 <script setup lang="ts">
 import { ref, watch } from "vue";
@@ -33,6 +43,7 @@ const currentIndex = ref<number>(props.current || 0);
 const emit = defineEmits<{
   (e: "clickBarItem", path: string, index: number): void;
 }>();
+
 const onTabbarClick = (index: number) => {
   if (currentIndex.value !== index) {
     currentIndex.value = index;

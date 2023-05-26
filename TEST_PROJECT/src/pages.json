@@ -3,7 +3,7 @@
     {
       "path": "pages/home/home",
       "style": {
-        "navigationBarTitleText": "テストプロジェクト"
+        "navigationBarTitleText": "Foofmonk Home"
       }
     }
     
@@ -11,7 +11,7 @@
   "globalStyle": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "テストプロジェクト",
-    "navigationBarBackgroundColor": "#D48831",
+    "navigationBarBackgroundColor": "#BF242A",
     "backgroundColor": "#F8F8F8"
   }
 }
