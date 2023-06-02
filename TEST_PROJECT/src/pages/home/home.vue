@@ -1,12 +1,22 @@
 <template>
-  <view class="content">
-    <page-map />
-    <page-navbar :current="0" />
-  </view>
+  
+  <!-- サーチバー -->
+  <page-searchbar />
+  <!-- マップ -->
+  <page-map />
+  <!-- ナビゲーションバー -->
+  <page-navbar :current="0" @clickBarItem = "redirectToByIndex"/>
+
 </template>
+
 <script setup lang="ts">
 import { ref } from "vue";
 const title = ref("Hello Vue");
+
+const redirectToByIndex = () => {
+  alert();
+}
+
 </script>
 
 <style>

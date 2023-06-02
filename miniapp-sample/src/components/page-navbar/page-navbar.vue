@@ -21,10 +21,12 @@
   </view>
 </template>
 
+<!-- セットアップ -->
 <script setup lang="ts">
 import { ref, watch } from "vue";
 import navs from "./navs.json";
 
+// jsonファイルから、propsの設定
 const props = defineProps<{
   items?: {
     pagePath: string;
@@ -35,6 +37,7 @@ const props = defineProps<{
   current: number;
 }>();
 
+// listに、props.itemsの形式で、navsの要素を代入し、デフォルト設定
 const list = props.items || navs;
 
 const currentIndex = ref<number>(props.current || 0);
@@ -42,6 +45,7 @@ const currentIndex = ref<number>(props.current || 0);
 const emit = defineEmits<{
   (e: "clickBarItem", path: string, index: number): void;
 }>();
+
 const onTabbarClick = (index: number) => {
   if (currentIndex.value !== index) {
     currentIndex.value = index;
