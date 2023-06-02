@@ -1,19 +1,26 @@
-console.log();
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Google Maps API サンプル</title>
+  </head>
+  <body>
+    <p>自宅の地図です。</p>
 
-//関数
-const func1 = (x,y) => {
-    return x + y;
-}
+    <div id="map" style="width:620px; height:400px"></div>
 
-const list = [1,2,3]
-console.log(list[0]);
+    <script type="text/javascript">
+    function initMap() {
+      var opts = {
+        zoom: 15,
+        center: new google.maps.LatLng(35.709984,139.810703)
+      };
+      var map = new google.maps.Map(document.getElementById("map"), opts);
+    }
+    </script>
 
-const object = {
-    name:"yusaku",
-    age:11
-};
-console.log(object.name);
-object.name = "Shuzo";
-
-
-
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDiCLXghb5ALx0FvTuHTw40dO2hn5f3_8&callback=initMap">
+    </script>
+  </body>
+</html>
